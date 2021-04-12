@@ -23,7 +23,7 @@
     },
     {
       "id": 4,
-      "title": "Building a JavaScript Development Environment2",
+      "title": "Building a JavaScript Development Environment",
       "slug": "javascript-development-environment",
       "authorId": 1,
       "category": "JavaScript"
@@ -72,43 +72,19 @@
     },
     {
       "id": 11,
-      "slug": "toastify-test",
-      "title": "toastify test",
-      "authorId": 2,
-      "category": "toastify test",
-      "createdAt": 1617847213847
+      "slug": "test2",
+      "title": "test2",
+      "authorId": 1,
+      "category": "test2",
+      "createdAt": 1618187604627
     },
     {
       "id": 12,
-      "slug": "test1",
-      "title": "test1",
-      "authorId": 1,
-      "category": "test1",
-      "createdAt": 1617848007524
-    },
-    {
-      "id": 13,
       "slug": "test2",
       "title": "test2",
-      "authorId": 2,
+      "authorId": 1,
       "category": "test2",
-      "createdAt": 1617848022809
-    },
-    {
-      "id": 14,
-      "slug": "test3",
-      "title": "test3",
-      "authorId": 1,
-      "category": "test3",
-      "createdAt": 1617848035841
-    },
-    {
-      "id": 15,
-      "slug": "test11",
-      "title": "test11",
-      "authorId": 1,
-      "category": "test11",
-      "createdAt": 1617848303465
+      "createdAt": 1618187687734
     }
   ],
   "authors": [

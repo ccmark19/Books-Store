@@ -11,3 +11,12 @@ export function saveCourse(course) {
     });
   });
 }
+
+export function loadCourses() {
+  return courseApi.getCourses().then((courses) => {
+    dispatcher.dispatch({
+      actionType: actionTypes.CREATE_COURSE,
+      courses: courses,
+    });
+  });
+}
