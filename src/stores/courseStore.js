@@ -1,7 +1,6 @@
 import { EventEmitter } from "events";
 import Dispatcher from "../appDispatcher";
 import actionTypes from "../actions/actionTypes";
-import { prependOnceListener } from "process";
 
 const CHANGE_EVENT = "change";
 let _courses = [];
@@ -32,6 +31,12 @@ const store = new CourseStore();
 
 Dispatcher.register((action) => {
   switch (action.actionType) {
+    case actionTypes.DELETE_COURSE:
+      _courses = _courses.filter(
+        (course) => course.id !== parseInt(action.id, 10)
+      );
+      store.emitChange();
+      break;
     case actionTypes.CREATE_COURSE:
       _courses.push(action.course);
       store.emitChange();

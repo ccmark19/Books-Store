@@ -1,5 +1,5 @@
 import React from "react";
-import Proptypes from "prop-types";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 function CourseList(props) {
@@ -7,6 +7,7 @@ function CourseList(props) {
     <table className="table">
       <thead>
         <tr>
+          <th>&nbsp;</th>
           <th>Title</th>
           <th>Author ID</th>
           <th>Category</th>
@@ -16,6 +17,14 @@ function CourseList(props) {
         {props.courses.map((course) => {
           return (
             <tr key={course.id}>
+              <td>
+                <button
+                  className="btn btn-outline-danger"
+                  onClick={() => props.deleteCourse(course.id)}
+                >
+                  Delete
+                </button>
+              </td>
               <td>
                 <Link to={"/course" + course.slug}>{course.title}</Link>
               </td>
@@ -30,12 +39,13 @@ function CourseList(props) {
 }
 
 CourseList.propTypes = {
-  courses: Proptypes.arrayOf(
-    Proptypes.shape({
-      id: Proptypes.number.isRequired,
-      title: Proptypes.string.isRequired,
-      authorId: Proptypes.number.isRequired,
-      category: Proptypes.string.isRequired,
+  deleteCourse: PropTypes.func.isRequired,
+  courses: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      authorId: PropTypes.number.isRequired,
+      category: PropTypes.string.isRequired,
     })
   ).isRequired,
 };
