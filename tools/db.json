@@ -76,15 +76,7 @@
       "title": "test2",
       "authorId": 1,
       "category": "test2",
-      "createdAt": 1618187604627
-    },
-    {
-      "id": 12,
-      "slug": "test2",
-      "title": "test2",
-      "authorId": 1,
-      "category": "test2",
-      "createdAt": 1618187687734
+      "createdAt": 1618314220102
     }
   ],
   "authors": [
